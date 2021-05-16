@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+build:
+  artifacts:
+  - image: mobimeo
+deploy:
+  helm:
+    releases:
+    - name: mobimeo
+      chartPath: ./deployment/charts
+      artifactOverrides:
+        image:
+          repository: mobimeo
+      namespace: mobimeo
