@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Mobimeo app 
+name: mobimeo-app
+version: 0.1.0

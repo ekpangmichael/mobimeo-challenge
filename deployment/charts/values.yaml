@@ -1,0 +1,27 @@
+image:
+  repository: weezyval/mobimeo:v14
+  pullPolicy: Always
+
+replicaCount: 1
+namespace: mobimeo
+containerPort: 5678
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources: 
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 100Mi
+
+env:
+  JWT_SECRET: ZHduZG5hZWU=
+  DB_NAME: cmR4aHp0cWY=
+  DB_USER: cmR4aHp0cWY=
+  DB_HOST: dGFpLmRiLmVsZXBoYW50c3FsLmNvbQ==
+  DB_PASS: TnBfdUp0UWdzY1pOVVk5X2RiSlJmV0ZnSm5KQXZXbVk=
+  NODE_ENV: cHJvZHVjdGlvbg==

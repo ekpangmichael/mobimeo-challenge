@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: migrations
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Chart.Name }}
+spec:
+  backoffLimit: 5
+  activeDeadlineSeconds: 200
+  template:
+    spec:
+      containers:
+      - name: migrations
+        image: {{ .Values.image.repository }}
+        command: ["npm", "run", "migrate"]
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
+          requests:
+            cpu: 50m
+            memory: 100Mi
+        envFrom:
+          - secretRef:
+              name: mobimeo-config
+      restartPolicy: Never
