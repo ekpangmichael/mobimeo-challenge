@@ -71,7 +71,7 @@ Authentication is required to access Ride CRUD APIs
 
 ## Deployment
 
-1. Clone this repository below:
+1. Clone this repository 
 
 2. cd into the repository
 
@@ -123,13 +123,12 @@ SERVICE_NAME: bW9iaW1lbw==
 
   
 
->  ***Values should be encoded in base64***
+>  ***Values should be encoded in base64*** this envs and use to create a kubernetes secret and are injected into the container during runtime
 
   
 
 ### Deploy the app
-
-Run the command `
+To deploy the application run the commands below:
 
 ```bash
 
@@ -147,7 +146,7 @@ make expose-app
 
 This command sdeploys the app using skaffold into minikube and perform a port forward on the app service.
 
-To access to endpoint make use of the postman collection posted above
+To access the endpoint make use of the postman collection provided above
 
 ### Deploy ELK stack
 
@@ -177,7 +176,7 @@ Open the kibana dashboard and create an index with **app-***
 
 Select `Time field: as 'startTime'`
 
-The application is also configured to work with APM, click on the apm link to view the metrics
+The application is also configured to work with APM, click on the apm link  on the kibana dashboard to view the APM metrics
 
 To delete all the charts run
 
