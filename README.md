@@ -149,6 +149,7 @@ These commande deploys the app using skaffold  in a kubernetes cluster and perfo
 To access the endpoints make use of the postman collection provided above
 
 ### Deploy ELK stack
+To deploy the application run the commands below:
 
 ```bash
 
@@ -169,6 +170,13 @@ make expose-kibana
   
 
 These commands deploy Elastic search, Kibana, Fluentd, APM-server and configure fluentd  to get the container logs, analyse and ship them to Elastichsearch.
+
+ELK was choosen because it is a highly scalable, fast and very efficient for logging
+- Elasticsearch runs on cluster mode which helps to provide high available
+- With the help of Kibana, logs index in Elasticsearch can you easily retrieved and analyse 
+- The ability to also get time series data makes it easy to perform investigation and faster debugging process
+- Fluentd facilitates logs collection from containers, format the logs and ship to Elasticsearch for indexing
+- 
 
   
 
