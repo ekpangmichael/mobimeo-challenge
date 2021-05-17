@@ -34,7 +34,7 @@ data:
         @type multi_format
         <pattern>
           format json
-          time_key startTime
+          time_key time
           keep_time_key true
         </pattern>
       </parse>
