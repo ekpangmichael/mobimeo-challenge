@@ -49,19 +49,19 @@ Authentication is required to access Ride CRUD APIs
 ```yaml
 env:
 
-	JWT_SECRET: <JWT_SECRET>
+JWT_SECRET: <JWT_SECRET>
 
-	DB_NAME: <DB_NAME>
+DB_NAME: <DB_NAME>
 
-	DB_USER: <DB_USER>
+DB_USER: <DB_USER>
 
-	DB_HOST: <DB_HOST>
+DB_HOST: <DB_HOST>
 
-	DB_PASS: <DB_HOST>
+DB_PASS: <DB_HOST>
 
-	NODE_ENV: cHJvZHVjdGlvbg==
+NODE_ENV: cHJvZHVjdGlvbg==
 
-	SERVICE_URL: aHR0cDovL2FwbS1zZXJ2ZXItYXBtLXNlcnZlci5lbGsuc3ZjLmNsdXN0ZXIubG9jYWw6ODIwMA==
+SERVICE_URL: aHR0cDovL2FwbS1zZXJ2ZXItYXBtLXNlcnZlci5lbGsuc3ZjLmNsdXN0ZXIubG9jYWw6ODIwMA==
 
 	SERVICE_NAME: bW9iaW1lbw==
 ```
@@ -84,6 +84,10 @@ To access to endpoint make use of the postman collection posted above
 make deploy-elk      
 ```
 To expose the kibana service run
+
+```bash
+make expose-kibana      
+```
 
 `This command deploy elastic search, Kibana, Fluentd,  APM-server and configure it to get logs from the application.
 
