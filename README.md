@@ -101,26 +101,28 @@ make delete
 ## Next Steps
 
 #### CI/CD pipeline
+<pre>
 On the ci/cd pipeline i will setup the following steps/stages
 Checkout the code
  -- Install dependencies
---  Run build and test test
+ -- Run build and test test
 If test pass
   -- Build the docker image and tag
   -- Run security scan to check the images for vulnerabilities (using aqua microscanner)
 If stage pass
--- Publish docker image to a docker registry
--- Publish helm chart to a registry
--- update the deployment manifest with the latest image tag
+  -- Publish docker image to a docker registry
+  -- Publish helm chart to a registry
+  -- update the deployment manifest with the latest image tag
 Deploy to dev
--- Run performance test
+  -- Run performance test
 If test pass
 Deploy to staging
--- Run performance and stress test
+  -- Run performance and stress test
 If test pass 
 Promote to production
 	-- run docker build
 	-- Run security scan to check the images for vulnerabilities (using aqua microscanner)
+</pre>
 ### Deploy application on production in a cloud environment. 
 To deploy application to a production environemt using AWS as a case study
 
