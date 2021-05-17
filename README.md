@@ -63,7 +63,7 @@ NODE_ENV: cHJvZHVjdGlvbg==
 
 SERVICE_URL: aHR0cDovL2FwbS1zZXJ2ZXItYXBtLXNlcnZlci5lbGsuc3ZjLmNsdXN0ZXIubG9jYWw6ODIwMA==
 
-	SERVICE_NAME: bW9iaW1lbw==
+SERVICE_NAME: bW9iaW1lbw==
 ```
 
 > ***Values should be encoded in base64***
