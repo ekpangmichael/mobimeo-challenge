@@ -123,11 +123,11 @@ SERVICE_NAME: bW9iaW1lbw==
 
   
 
->  ***Values should be encoded in base64*** this envs and use to create a kubernetes secret and are injected into the container during runtime
+>  ***Values should be encoded in base64*** this envs are use to create a kubernetes secret which is injected into the container during runtime
 
-  
+  <br>
 
-### Deploy the app
+## Deploy the app
 To deploy the application run the commands below:
 
 ```bash
@@ -144,7 +144,7 @@ make expose-app
 
 ```
 
-This command sdeploys the app using skaffold into minikube and perform a port forward on the app service.
+These commande deploys the app using skaffold  in a kubernetes cluster running on minikube and perform a port forward on the app service.
 
 To access the endpoint make use of the postman collection provided above
 
@@ -168,7 +168,7 @@ make expose-kibana
 
   
 
-`This command deploy elastic search, Kibana, Fluentd, APM-server and configure it to get logs from the application.
+These commands deploy Elastic search, Kibana, Fluentd, APM-server and configure fluentd  to get the container logs, analyse and ship to them to Elastichsearch.
 
   
 
@@ -229,11 +229,7 @@ Deploy to staging
 If test pass
 
 Promote to production
-
--- run docker build
-
--- Run security scan to check the images for vulnerabilities (using aqua microscanner)
-
+-- Run performance and stress test
 </pre>
 
 ### Deploy application on production in a cloud environment.
