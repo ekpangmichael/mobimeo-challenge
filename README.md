@@ -168,7 +168,7 @@ make expose-kibana
 
   
 
-These commands deploy Elastic search, Kibana, Fluentd, APM-server and configure fluentd  to get the container logs, analyse and ship to them to Elastichsearch.
+These commands deploy Elastic search, Kibana, Fluentd, APM-server and configure fluentd  to get the container logs, analyse and ship them to Elastichsearch.
 
   
 
@@ -197,33 +197,24 @@ make delete
 On the ci/cd pipeline i will setup the following steps/stages
 
 Checkout the code
-
 -- Install dependencies
-
--- Run build and test test
+-- Run build and test 
 
 If test pass
-
--- Build the docker image and tag
-
+-- Build the docker image and tag it
 -- Run security scan to check the images for vulnerabilities (using aqua microscanner)
 
 If stage pass
-
+-- update the deployment manifest with the latest image tag
 -- Publish docker image to a docker registry
-
 -- Publish helm chart to a registry
 
--- update the deployment manifest with the latest image tag
-
 Deploy to dev
-
 -- Run performance test
 
 If test pass
 
 Deploy to staging
-
 -- Run performance and stress test
 
 If test pass
@@ -265,31 +256,16 @@ To deploy application to a production environemt using AWS as a case study
 ## Major Technologies
 
   
-
-  
-
 NodeJS: Visit [here](https://nodejs.org/en/) for details.
 
-  
-
-  
-
+ 
 ExressJS: Visit [here](https://expressjs.com) for details.
 
-  
-
-  
 
 Postgresql Database: Visit [here](https://www.postgresql.org/docs) for details.
 
-  
-
-  
 
 Sequelize ORM: Visit [here](https://sequelize.org/master) for details.
-
-  
-
   
 
 log4js: Visit [here](https://www.npmjs.com/package/log4js) for details.
