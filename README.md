@@ -176,10 +176,7 @@ ELK was choosen because it is a highly scalable, fast and very efficient for log
 - With the help of Kibana, logs index in Elasticsearch can you easily retrieved and analyse 
 - The ability to also get time series data makes it easy to perform investigation and faster debugging process
 - Fluentd facilitates logs collection from containers, format the logs and ship to Elasticsearch for indexing
-- 
-
   
-
 Open the kibana dashboard and create an index with **app-***
 
 Select `Time field: as 'startTime'`
