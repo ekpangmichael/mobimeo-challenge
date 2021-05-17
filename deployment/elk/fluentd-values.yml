@@ -1,0 +1,17 @@
+
+image:
+  registry: docker.io
+  repository: bitnami/fluentd
+  tag: 1.12.3-debian-10-r4
+  pullPolicy: IfNotPresent
+
+forwarder:
+  ## Enable forwarder daemonset
+  enabled: true
+  configFile: fluentd.conf
+
+  ## Name of the configMap that contains the configuration files for fluentd
+  ## If not specified, one will be created by default
+  configMap: fluentd-config
+
+  
