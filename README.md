@@ -123,7 +123,7 @@ SERVICE_NAME: bW9iaW1lbw==
 
   
 
->  ***Values should be encoded in base64*** this envs are use to create a kubernetes secret which is injected into the container during runtime
+>  ***Values should be encoded in base64.*** These envs are use to create a kubernetes secret which is injected into the container during runtime
 
   <br>
 
@@ -136,7 +136,7 @@ make deploy-app
 
 ```
 
-To expose the app service run
+To expose the application service run
 
 ```bash
 
@@ -144,9 +144,9 @@ make expose-app
 
 ```
 
-These commande deploys the app using skaffold  in a kubernetes cluster running on minikube and perform a port forward on the app service.
+These commande deploys the app using skaffold  in a kubernetes cluster and perform a port forward on the app service.
 
-To access the endpoint make use of the postman collection provided above
+To access the endpoints make use of the postman collection provided above
 
 ### Deploy ELK stack
 
