@@ -1,7 +1,7 @@
 
 const apm = require('elastic-apm-node').start({
   serviceName: 'mobimeo',
-  serverUrl: 'http://apm-server-apm-server.default.svc.cluster.local:8200',
+  serverUrl: 'http://apm-server-apm-server.elk.svc.cluster.local:8200',
 });
 require("dotenv").config();
 const express = require("express");
