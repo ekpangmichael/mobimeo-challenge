@@ -171,11 +171,8 @@ make expose-kibana
 
 These commands deploy Elastic search, Kibana, Fluentd, APM-server and configure fluentd  to get the container logs, analyse and ship them to Elastichsearch.
 
-ELK was choosen because it is a highly scalable, fast and very efficient for logging
-- Elasticsearch runs on cluster mode which helps to provide high available
-- With the help of Kibana, logs index in Elasticsearch can you easily retrieved and analyse 
-- The ability to also get time series data makes it easy to perform investigation and faster debugging process
-- Fluentd facilitates logs collection from containers, format the logs and ship to Elasticsearch for indexing
+
+
   
 Open the kibana dashboard and create an index with **app-***
 
@@ -183,7 +180,16 @@ Select `Time field: as 'startTime'`
 
 The application is also configured to work with APM, click on the apm link  on the kibana dashboard to view the APM metrics
 
-To delete all the charts run
+
+ELK was choosen because it is a highly scalable, fast and very efficient for logging
+- Elasticsearch runs on cluster mode which helps to provide high available
+- With the help of Kibana, logs index in Elasticsearch can you easily retrieved and analyse 
+- The ability to also get time series data makes it easy to perform investigation and faster debugging process
+- Fluentd facilitates logs collection from containers, format the logs and ship to Elasticsearch for indexing
+
+
+### Delete the charts 
+To delete all the helm charts 
 
 ```bash
 
@@ -210,7 +216,7 @@ If test pass
 -- Run security scan to check the images for vulnerabilities (using aqua microscanner)
 
 If stage pass
--- update the deployment manifest with the latest image tag
+-- update the deployment manifest with the latest image tag/ helm chart version
 -- Publish docker image to a docker registry
 -- Publish helm chart to a registry
 
