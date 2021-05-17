@@ -15,9 +15,10 @@ deploy-app() {
   echoMessage "${blue}" "deploying project using skaffold"
   kubectl create ns mobimeo
   skaffold run   
-  echoMessage "${green}" "app deployed successfuly"
+  echoMessage "${green}" "app deployed successfully"
 }
 
+# Expose application service
 expose-app(){
   kubectl port-forward service/mobimeo-app 5678:80 -n mobimeo  
 }
@@ -33,25 +34,29 @@ deploy-elk() {
  helm install fluentd bitnami/fluentd --version="3.7.3" -f ./deployment/elk/fluentd-values.yml -n elk
  helm install apm-server elastic/apm-server --version="7.12.1" -n elk
  helm install kibana elastic/kibana --version="7.12.1" -f ./deployment/elk/kibana-values.yml -n elk
- echoMessage "${green}" "ELK stack deployed successfuly"
+ echoMessage "${green}" "ELK stack deployed successfully"
 }
 
+# Expose Kibana service 
 expose-kibana(){
   kubectl port-forward service/kibana-kibana 5601:5601 -n elk
 }
 
-delete(){
 
+
+# Delete all charts
+delete(){
 echoMessage "${blue}" "uninstalling charts"
 helm del kibana -n elk  
 helm del apm-server -n elk 
 helm del fluentd -n elk 
 helm del elasticsearch -n elk  
-helm del mobimeo -n mobimeo   
-echoMessage "${green}" "Charts uninstalled successfuly"
+helm del mobimeo -n mobimeo  
+kubectl delete ns elk
+kubectl delete ns mobimeo 
+echoMessage "${green}" "Charts uninstalled successfully"
 
 }
-
 
 main() {
   deploy-app
