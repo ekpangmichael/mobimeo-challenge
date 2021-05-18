@@ -65,7 +65,7 @@ Authentication is required to access Ride CRUD APIs
 
 - Install [skaffold](https://skaffold.dev/docs/install/)
 
-- Install [Helm](https://helm.sh/)
+- Install [Helm](https://helm.sh/) (I used Helm v3.1.2)
 
   
 
