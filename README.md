@@ -169,7 +169,7 @@ make expose-kibana
 
   
 
-These commands deploy Elastic search, Kibana, Fluentd, APM-server and configure fluentd  to get the container logs, analyse and ship them to Elastichsearch.
+These commands deploy Elastic search, Kibana, Fluentd, APM-server and configure fluentd  to get the container logs, format and ship the logs to Elastichsearch.
 
 
 
