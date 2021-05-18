@@ -149,7 +149,7 @@ These commande deploys the app using skaffold  in a kubernetes cluster and perfo
 To access the endpoints make use of the postman collection provided above
 
 ### Deploy ELK stack
-To deploy the application run the commands below:
+To deploy the ELK stack run the commands below:
 
 ```bash
 
