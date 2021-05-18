@@ -137,56 +137,14 @@ Authentication is required to access Ride CRUD APIs
 
 env:
 
-  
-
-  
-
 JWT_SECRET: <JWT_SECRET>
-
-  
-
-  
-
 DB_NAME: <DB_NAME>
-
-  
-
-  
-
 DB_USER: <DB_USER>
-
-  
-
-  
-
 DB_HOST: <DB_HOST>
-
-  
-
-  
-
 DB_PASS: <DB_HOST>
-
-  
-
-  
-
 NODE_ENV: cHJvZHVjdGlvbg==
-
-  
-
-  
-
 SERVICE_URL: aHR0cDovL2FwbS1zZXJ2ZXItYXBtLXNlcnZlci5lbGsuc3ZjLmNsdXN0ZXIubG9jYWw6ODIwMA==
-
-  
-
-  
-
 SERVICE_NAME: bW9iaW1lbw==
-
-  
-
 ```
 
   
@@ -243,7 +201,7 @@ To access the endpoints make use of the postman collection provided above
 
   
 
-### Deploy ELK stack
+## Deploy ELK stack
 
 1. To deploy the ELK stack run the commands below:
 
@@ -300,7 +258,7 @@ The application is also configured to work with APM, click on the apm link on th
   
   
 
-ELK was choosen because it is a highly scalable, fast and very efficient for logging
+ELK was choosen because it is a highly scalable, fast and very efficient solution for logging
 
 - Elasticsearch runs on cluster mode which helps to provide high available
 
@@ -309,13 +267,14 @@ ELK was choosen because it is a highly scalable, fast and very efficient for log
 - The ability to also get time series data makes it easy to perform investigation and faster debugging process
 
 - Fluentd facilitates logs collection from containers, format the logs and ship them to  Elasticsearch for indexing
+- Fluentd is deployed as a DaemonSet on all the worker nodes
 
   
   
 
-### Delete the charts
+## Delete the charts
 
-To delete all the helm charts
+To delete all the helm charts run
 
   
 
@@ -334,20 +293,11 @@ make delete
 ## Next Steps
 
   
-
-  
-
 #### CI/CD pipeline
-
-  
 
 <pre>
 
-  
-
 On the ci/cd pipeline i will setup the following steps/stages
-
-  
 
 Checkout the code
 
