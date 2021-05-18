@@ -193,7 +193,7 @@ make expose-app
 
   
 
-These commande deploys the app using skaffold in a kubernetes cluster and perform a port forward on the app service.
+These command deploys the app using skaffold into a kubernetes cluster and perform a port forward on the app service.
 
   
 
